@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+    }
+
+    /* Clearfix (clear floats) */
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+</style>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" type="text/css"
+          th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
+
+    <title>PhotoApp Sandbox</title>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span> <span
+                    class="icon-bar"></span> <span class="icon-bar"></span> <span
+                    class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" th:href="@{/}">PhotoApp Sandbox</a>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container-fluid padding-0" style="margin-top: 50px">
+    <div class="row padding-0">
+
+        <div class="col-md-4" style="margin-left: 50px">
+            <h2>Images Feed</h2>
+            <p>Explore:</p>
+        </div>
+        <div class="col-md-4" align="right"></div>
+    </div>
+</div>
+<div class="row">
+    <div class="column">
+        <img src="https://sandbox-photo-app.s3.eu-west-3.amazonaws.com/data/Start.png" style="height:500px">
+    </div>
+    <div class="column">
+        <img src="https://sandbox-photo-app.s3.eu-west-3.amazonaws.com/data/iPhone+X+PSD+Mockup+01.png" style="height:500px">
+    </div>
+    <div class="column">
+        <img src="https://sandbox-photo-app.s3.eu-west-3.amazonaws.com/data/Reflection+1.jpg" style="height:500px">
+    </div>
+</div>
+
+</body>
+</html>
